@@ -2,11 +2,11 @@ const Joi = require('joi');
 
 const clientValidate = (req, res, next) => {
   const { error } = Joi.object({
-    name: Joi.string().required(),
     cpf: Joi.string().required(),
-    birthDate: Joi.date().required(),
+    name: Joi.string().required(),
+    birthdate: Joi.date().required(),
     contact: Joi.string().required(),
-    cep: Joi.number().required(),
+    cep: Joi.string().required(),
     bank: Joi.string().required(),
   }).validate(req.body);
 

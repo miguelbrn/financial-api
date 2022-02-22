@@ -8,10 +8,10 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      fullName: {
+      cpf: {
         type: Sequelize.STRING
       },
-      cpf: {
+      name: {
         type: Sequelize.STRING
       },
       birthDate: {
@@ -21,7 +21,7 @@ module.exports = {
         type: Sequelize.STRING
       },
       cep: {
-        type: Sequelize.INTEGER
+        type: Sequelize.STRING
       },
       bank: {
         type: Sequelize.STRING

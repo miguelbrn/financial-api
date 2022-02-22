@@ -1,10 +1,14 @@
 const express = require('express');
-const app = express();
-const {getFgtsByCpfClient } = require('./controllers/clientsController');
+const { getFgtsByCpfClient } = require('./controllers/clientsController');
+const { clientValidate } = require('./middlewares/clientMiddleware');
 const errors = require('./errors/errors');
+
+const app = express();
+
 
 app.use(express.json());
 
-app.get('/Clientes/:cpf/SaquesAniversario/Saldo', getFgtsByCpfClient );
+app.post('/client', clientValidate, getFgtsByCpfClient );
+app.use(errors);
 
 module.exports = app;
