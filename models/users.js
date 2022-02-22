@@ -6,6 +6,8 @@ module.exports = (sequelize, DataTypes) => {
     contact: DataTypes.STRING,
     cep: DataTypes.STRING,
     bank: DataTypes.STRING,
+    totalLending: DataTypes.INTEGER,
+    totalFgts: DataTypes.INTEGER,
   },
   {
     timestamps: true,

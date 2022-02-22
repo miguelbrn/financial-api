@@ -26,6 +26,12 @@ module.exports = {
       bank: {
         type: Sequelize.STRING
       },
+      totalLending: {
+        type: Sequelize.INTEGER
+      },
+      totalFgts: {
+        type: Sequelize.INTEGER
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE
