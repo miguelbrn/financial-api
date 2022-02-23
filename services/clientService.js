@@ -7,7 +7,7 @@ const createSimulation = async (cpf, name, birthDate, contact, cep, bank) => {
     ValorTotal,
     QuantidadeParcelas,
     ValorFinanciado
-  } = await externalData;
+  } = await externalData(cpf);
   
   const { dataValues: { id } } = await Users.create({
     cpf,
