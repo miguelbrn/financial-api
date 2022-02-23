@@ -13,10 +13,10 @@ meu objetivo era criar um POST usando axios gerando um token válido, caso o tok
 *ATT* Criei uma chamada de API externa, usando axios, no arquivo > ./services/externalApi.js
 
 # Bibliotecas usadas durante o desenvolvimento:
-`DotEnv`: Para variáveis de ambiente,
-`Axios`: Para tratar requisições de API's externas,
-`Joi`: Para validação e tratamento de erros dos dados recebidos pelas requisições,
-`Sequelize`: ORM responsável em manipular o banco de dados relacional usado no projeto (MySql)
+* `DotEnv`: Para variáveis de ambiente,
+* `Axios`: Para tratar requisições de API's externas,
+* `Joi`: Para validação e tratamento de erros dos dados recebidos pelas requisições,
+* `Sequelize`: ORM responsável em manipular o banco de dados relacional usado no projeto (MySql)
 # Como executar a aplicação:
 
 1. Clone o repositório na sua máquina
