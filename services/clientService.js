@@ -1,8 +1,14 @@
 const { Users, Consults } = require('../models');
-const wrapper = require('../mock/mercantilWrapperMock');
+const externalData = require('./externalApi')
 
 const createSimulation = async (cpf, name, birthDate, contact, cep, bank) => {
-  const { ValorEmprestimo, ValorTotal, QuantidadeParcelas, ValorFinanciado } = wrapper
+  const {
+    ValorEmprestimo,
+    ValorTotal,
+    QuantidadeParcelas,
+    ValorFinanciado
+  } = await externalData;
+  
   const { dataValues: { id } } = await Users.create({
     cpf,
     name,
@@ -13,13 +19,11 @@ const createSimulation = async (cpf, name, birthDate, contact, cep, bank) => {
     totalLending: ValorEmprestimo,
     totalFgts: ValorTotal,
   });
-  await Consults.create({
-    userId: id,
-  })
+  
+  await Consults.create({ userId: id })
+  
   return { ValorEmprestimo, ValorTotal, QuantidadeParcelas, ValorFinanciado };
 };
-
-
 
 module.exports = {
   createSimulation,
