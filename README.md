@@ -10,6 +10,8 @@ As simulações realizadas devem ser todas registradas em tabela de eventos para
 Infelizmente tive problemas ao me comunicar com a API da Mercantil do Brasil,
 meu objetivo era criar um POST usando axios gerando um token válido, caso o token fosse inválido ou tivesse expirado, a requisição voltaria ao fluxo que geraria o token e seguiria para consulta no banco de acordo com os Endpoints presentes na documentação. Por total responsabilidade minha, só pude começar o teste depois das 18 horas, e ao longo do desenvolvimento percebi que caso continuasse tentando me comunicar com a API externa, perderia o tempo de desenvolvimento que me restava. Diante disso, me comprometo a demonstrar minha competência em consumo de API's caso tenha oportunidade de continuar no processo de contratação.
 
+*ATT* Criei uma chamada de API externa, usando axios, no arquivo > ./services/externalApi.js
+
 # Bibliotecas usadas durante o desenvolvimento:
 `DotEnv`: Para variáveis de ambiente,
 `Axios`: Para tratar requisições de API's externas,
