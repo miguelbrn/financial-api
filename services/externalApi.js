@@ -6,9 +6,11 @@ const dataHeader = {};
 const getData = async (cpf) => {
   const getSaldoUrl = `${baseUrl}/Clientes/${cpf}/SaquesAniversario/Saldo`
   try {
+    const token = await getToken()
+    console.log(token)
     const response = await axios.get(getSaldoUrl, dataHeader, {
     headers: {
-      'Authorization': await getToken()
+      'Authorization': token
     },
   });
 
@@ -27,10 +29,13 @@ const getToken = async () => {
         'Content-Type': 'application/x-www-form-urlencoded'
       } 
     })
+    
     return access_token
   } catch (error) {
     console.log(error)
   };
 };
+
+getData(12163879402)
 
 module.exports = getData;
